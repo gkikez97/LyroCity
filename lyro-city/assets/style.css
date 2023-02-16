@@ -1,0 +1,303 @@
+/* Google Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap");
+
+/* CSS Variables */
+
+:root {
+
+  /* Color Scheme */
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+
+  /* Typography */
+
+  --primary-font: 'Manrope', sans-serif;
+}
+
+/* Global HTML Elements */
+
+* {
+  font-family: var(--primary-font);
+}
+
+body {
+  margin: 0;
+  padding-top: 142px;
+}
+
+h1 {
+  font-size: 3.8em;
+}
+
+h2 {
+  font-size: 2.3em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.35em;
+}
+
+p,
+h5,
+ul li,
+ol li {
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+ul,
+ol {
+  margin-top: -20px;
+}
+
+p>a:link,
+li>a:link,
+p>a:visited,
+li>a:visited,
+p>a:active,
+li>a:active {
+  color: var(--primary-color);
+}
+
+p>a:focus,
+li>a:focus,
+p>a:hover,
+li>a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+/* Desktop Screen */
+@media only screen and (min-width: 1200px) {
+  main {
+    font-size: 100%;
+  }
+}
+
+/* Tablet Screen */
+@media only screen and (min-width: 501px) and (max-width: 700px) {
+  main {
+    font-size: 90%;
+  }
+}
+
+/* Mobile Screen */
+@media only screen and (max-width: 500px) {
+  body {
+    padding-top: 218px;
+  }
+}
+
+/* Smaller Mobile Screen */
+@media only screen and (max-width: 400px) {
+  main {
+    font-size: 80%;
+  }
+}
+
+
+/* Helper Classes */
+
+.display-mobile {
+  display: none
+;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-small {
+  font-size: 14px;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+/* Tablet Screen */
+@media screen and (max-width: 700px) {
+  .flex-column-tablet {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/* Mobile Screen */
+@media only screen and (max-width: 500px) {
+  .display-desktop {
+    display: none;
+  }
+
+  .display-mobile {
+    display: block;
+  }
+
+  .flex-column-mobile {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+
+/* Header Styles */
+
+header {
+  background-color: var(--secondary-color);
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+search-bar {
+  margin: 0 auto;
+  display: block;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  float:left
+}
+
+.logo-img {
+  width: 500px;
+  display: flex;
+margin-left: 30%;
+margin-right: 50%;
+  
+}
+
+.page-divider {
+  border-top: 2px wavy #000;
+  margin: 30px 15px;
+  min-width: calc(100% - 30px);
+}
+
+.top-nav>.page-divider {
+  margin: 20px 15px;
+}
+
+.top-nav__links {
+  margin-right: 20px;
+}
+
+.top-nav__links a {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  text-decoration: none;
+  justify-content: space-evenly;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.top-nav__links a:hover {
+  text-decoration: none;
+  background-color: rgb(171, 171, 171);
+  color: black;
+}
+
+.top-nav__links a:first-child {
+  margin-right: 20px;
+}
+
+form {
+  width: 300px;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+input {
+  all: unset;
+  font: 16px system-ui;
+  color: rgb(0, 0, 0);
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+
+svg {
+  color: rgb(0, 0, 0);
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+}
+
+::placeholder {
+  color: rgb(141, 141, 141);
+  opacity: 0.7; 
+}
+
+/* Page Styles */
+
+.page-content {
+  margin: 30px 10px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background: #ffffff;
+}
+
+/***************** Footer Styles *****************/
+footer {
+  background-color: var(--secondary-color);
+  padding: 20px 10px;
+}
+
+/* Big Desktop Screen */
+@media only screen and (min-width: 1200px) {
+  .top-nav {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile Screen */
+@media only screen and (max-width: 500px) {
+  .top-nav__links {
+    margin-top: -10px;
+  }
+}
